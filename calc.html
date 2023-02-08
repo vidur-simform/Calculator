@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
@@ -31,19 +32,69 @@
       <div class="btn-others">MS</div>
     </div>
     <div class="rowu">
-      <div class="btn-others2">
-        &#x25FF;
-        <span>&nbsp;&nbsp;</span>
-        <span>Trigonometry&nbsp;
-          <i class="fa-solid fa-chevron-down"></i>
-        </span>
+      <div class="dropdown">
+        <div id="trigonometry" class="dropbtn">
+          &#x25FF;
+          <span>&nbsp;&nbsp;</span>
+          <span>Trigonometry&nbsp;
+            <i class="fa-solid fa-chevron-down"></i>
+          </span>
+        </div>
+        <div id="trigonometry-content" class="dropdown-content">
+          <div class="rowu">
+            <div class="btn btnd" id="tri-btn-2nd">2<sup>nd</sup></div>
+            <div class="btn btnd tri" id="sin">sin</div>
+            <div class="btn btnd atri" id="asin"><span>sin<sup>-1</sup></span></div>
+            <div class="btn btnd hyp" id="sinh">sinh</div>
+            <div class="btn btnd ahyp" id="asinh"><span>sinh<sup>-1</sup></span></div>
+
+            <div class="btn btnd tri" id="cos">cos</div>
+            <div class="btn btnd atri" id="acos"><span>cos<sup>-1</sup></span></div>
+            <div class="btn btnd hyp" id="cosh">cosh</div>
+            <div class="btn btnd ahyp" id="acosh"><span>cosh<sup>-1</sup></span></div>
+
+            <div class="btn btnd tri" id="tan">tan</div>
+            <div class="btn btnd atri" id="atan"><span>tan<sup>-1</sup></span></div>
+            <div class="btn btnd hyp" id="tanh">tanh</div>
+            <div class="btn btnd ahyp" id="atanh"><span>tanh<sup>-1</sup></span></div>
+          </div>
+          <div class="rowu">
+            <div class="btn btnd" id="tri-btn-hyp">hyp</div>
+            <div class="btn btnd tri" id="sec">sec</div>
+            <div class="btn btnd atri" id="asec"><span>sec<sup>-1</sup></span></div>
+            <div class="btn btnd hyp" id="sech">sech</div>
+            <div class="btn btnd ahyp" id="asech"><span>sech<sup>-1</sup></span></div>
+
+            <div class="btn btnd tri" id="csc">csc</div>
+            <div class="btn btnd atri" id="acsc"><span>csc<sup>-1</sup></span></div>
+            <div class="btn btnd hyp" id="csch">csch</div>
+            <div class="btn btnd ahyp" id="acsch"><span>csch<sup>-1</sup></span></div>
+
+            <div class="btn btnd tri" id="cot">cot</div>
+            <div class="btn btnd atri" id="acot"><span>cot<sup>-1</sup></span></div>
+            <div class="btn btnd hyp" id="coth">coth</div>
+            <div class="btn btnd ahyp" id="acoth"><span>coth<sup>-1</sup></span></div>
+          </div>  
+        </div>
       </div>
-      <div class="btn-others2">
-        &#402;
-        <span>
-          &nbsp;&nbsp;Functions&nbsp;
-          <i class="fa-solid fa-chevron-down"></i>
-        </span>
+      <div class="dropdown">
+        <div id="functions" class="dropbtn">
+          <span style="font-size: large;font-weight: bold;">
+            &#402;</span>&nbsp;&nbsp;Functions&nbsp;<i class="fa-solid fa-chevron-down"></i>
+          </span>
+        </div>
+        <div id="functions-content" class="dropdown-content">
+          <div class="rowu">
+            <div class="btn btnd" id="abs2">&#8739;x&#8739;</div>
+            <div class="btn btnd" id="floor">&LeftFloor;x&RightFloor;</div>
+            <div class="btn btnd" id="ceil">&LeftCeiling;x&RightCeiling;</div>
+          </div>
+          <div class="rowu">
+            <div class="btnd" id="random">rand</div>
+            <div class="btnd" id="deg-to-dms"><i class="fa-solid fa-arrow-right"></i>dms</div>
+            <div class="btnd" id="dms-to-deg"><i class="fa-solid fa-arrow-right"></i>deg</div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="mainsection">
@@ -106,52 +157,57 @@
         </div>
       </div>
       <div class="rowu">
-        <div class="btn btn-main"><span>2<sup>nd</sup></span></div>
-        <div class="btn btn-main">&#x3C0;</i></div>
-        <div class="btn btn-main">e</div>
+        <div class="btn btn-main " id="btn-2nd"><span>2<sup>nd</sup></span></div>
+        <div class="btn btn-main " id="const-pi">&#x3C0;</i></div>
+        <div class="btn btn-main" id="const-e">e</div>
         <div class="btn btn-main" id="clear">CE</div>
         <div class="btn btn-main" id="erase-last">
           <img src="images/erase_last.png" width="33%" height="50%">
         </div>
       </div>
       <div class="rowu">
-        <div class="btn btn-main" id="square"><span>x<sup>2</sup></span></div>
-        <!-- <div class="btn btn-main"><span>x<sup>3</sup></span></div> -->
+        <div class="btn btn-main btn-2nd-column" id="square"><span>x<sup>2</sup></span></div>
+        <div class="btn btn-main btn-2nd-column hidden" id="cube"><span>x<sup>3</sup></span></div>
         <div class="btn btn-main" id="one-by-x"><span><sup>1</sup>&#8725;<sub>x</sub></span></div>
         <div class="btn btn-main" id="abs">&#8739;x&#8739;</div>
         <div class="btn btn-main" id="exp">exp</div>
         <div class="btn btn-main" id="mod">mod</div>
       </div>
       <div class="rowu">
-        <div class="btn btn-main" id="square-root">&#8730;x</div>
+        <div class="btn btn-main btn-2nd-column" id="square-root">&#8730;x</div>
+        <div class="btn btn-main btn-2nd-column hidden" id="cube-root"><span><sup>3</sup>&#8730;x</span></div>
         <div class="btn btn-main bracket">(</div>
         <div class="btn btn-main bracket">)</div>
         <div class="btn btn-main" id="fact">n!</div>
         <div class="btn btn-main operator">÷</div>
       </div>
       <div class="rowu">
-        <div class="btn btn-main" id="x-power-y"><span>x<sup>y</sup></span></div>
+        <div class="btn btn-main btn-2nd-column" id="x-power-y"><span>x<sup>y</sup></span></div>
+        <div class="btn btn-main btn-2nd-column hidden" id="yth-root-of-x"><span><sup>y</sup>&#8730;x</span></div>
         <div class="btn btn-num number">7</div>
         <div class="btn btn-num number">8</div>
         <div class="btn btn-num number">9</div>
         <div class="btn btn-main operator">x</div>
       </div>
       <div class="rowu">
-        <div class="btn btn-main" id="ten-power-x"><span>10<sup>x</sup></span></div>
+        <div class="btn btn-main btn-2nd-column" id="ten-power-x"><span>10<sup>x</sup></span></div>
+        <div class="btn btn-main btn-2nd-column hidden" id="two-power-x"><span>2<sup>x</sup></span></div>
         <div class="btn btn-num number">4</div>
         <div class="btn btn-num number">5</div>
         <div class="btn btn-num number">6</div>
         <div class="btn btn-main operator">-</div>
       </div>
       <div class="rowu">
-        <div class="btn btn-main" id="log">log</div>
+        <div class="btn btn-main btn-2nd-column" id="log">log</div>
+        <div class="btn btn-main btn-2nd-column hidden"><span>log<sub>y</sub>x</span></div>
         <div class="btn btn-num number" type="input" value="1">1</div>
         <div class="btn btn-num number">2</div>
         <div class="btn btn-num number">3</div>
         <div class="btn btn-main operator">+</div>
       </div>
       <div class="rowu">
-        <div class="btn btn-main" id="ln">ln</div>
+        <div class="btn btn-main btn-2nd-column" id="ln">ln</div>
+        <div class="btn btn-main btn-2nd-column hidden" id="e-power-x"><span>e<sup>x</sup></span></div>
         <div class="btn btn-num " id="altersign"><span><sup>+</sup>/<sub>-</sub></span></div>
         <div class="btn btn-num number">0</div>
         <div class="btn btn-num number">.</div>

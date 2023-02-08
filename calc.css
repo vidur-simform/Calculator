@@ -26,8 +26,8 @@ body {
   }
   .btn-num {
     background-color: #fdfdfd;
-    font-weight: 600;
-    font-size: x-large;
+    /* font-weight: 600; */
+    /* font-size: x-large; */
     font-family: fantasy;
   }
   

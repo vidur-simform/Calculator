@@ -1,5 +1,5 @@
 # Scientific Calculator
-**view** : https://vidur-simform.github.io/
+**view** : https://vidur-simform.github.io/Calculator/
 
 #### This is calculator created using html,css and js.
 It is similar like window's calculator application.

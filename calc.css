@@ -1,142 +1,130 @@
 body {
-    color: #232323;
-    font-weight: 500;
-    font-size: large;
-    cursor: pointer;
-  }
-  .calculator {
-    width: 500px;
-    background-color: #f2f2f2;
-    margin: auto;
-  }
-  
-  /* .functions {
-    display: flex;
-    justify-content: left;
-    flex-direction: row;
-  }
-   */
-  .btn {
-    height: 50px;
-    width: 19%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 3px;
-  }
-  .btn-num {
-    background-color: #fdfdfd;
-    /* font-weight: 600; */
-    /* font-size: x-large; */
-    font-family: fantasy;
-  }
-  
-  .btn-main {
-    background-color: #f7f7f7;
-  }
-  
-  .rowu {
-    display: flex;
-    flex-direction: row;
-    /* align-items: left; */
-  }
-  .input {
-    display: block;
-    height: 4rem;
-    width: 99%;
-    text-align: right;
-    border: none;
-    background-color: #f2f2f2;
-    font-size: 2rem;
-    outline: none;
-    text-decoration: none;
-  }
-  .expression {
-    display: block;
-    height: 4rem;
-    width: 99%;
-    text-align: right;
-    border: none;
-    background-color: #f2f2f2;
-    font-size: 1.5rem;
-    outline: none;
-    text-decoration: none;
-  }
-  .btn-others {
-      height: 50px;
-      width: 19%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 3px;
-      font-size: medium;
-      font-weight: bold;
-  }
-  /* .btn-others2 {
-      height: 35px;
-      justify-content: center;
-      align-items: center;
-      display: flex;
-      margin: 10px;
-      font-size: medium;
-      font-weight: 100;
-  } */
-  .dropbtn {
-    color: black;
-    width: 184px ;
-    padding: 16px;
-    /* font-size: 16px; */
-    border: none;
-    margin: 10px;
-   
-    cursor: pointer;
-  }
-  .dropdown1 {
-    width: 20rem;
-    position: absolute;
-    opacity: 10;
-    background-color: #f2f2f2;
-  }
+  color: #232323;
+  font-weight: 500;
+  font-size: large;
+  cursor: pointer;
+}
 
-  .btnd{
-    height: 50px;
-    width: 33%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    margin: 3px;
-    background-color: #f7f7f7;
-    
-  }
-  .dropdown1-1, .dropdown1-2, .dropdown1-3, .dropdown1-4 {
-    display: none;
-  }
-  .clicked-bg{
-    background-color: rgb(146, 199, 214);
-  }
-  .hidden{
-    display: none;
-  }
- 
-  /* .dropbtn:hover , .dropbtn:focus {
-    background-color: rgb(221, 218, 218);
-  } */
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  .dropdown-content {
-    display: none;
-    width: 100%;
-    position: absolute;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-  
- 
-  .show {
-    display: block;
-  }
+.calculator {
+  width: 500px;
+  background-color: #f2f2f2;
+  margin: auto;
+}
+
+/* display of input and expression */
+.input {
+  display: block;
+  height: 4rem;
+  width: 99%;
+  text-align: right;
+  border: none;
+  background-color: rgb(241,241,241);
+  font-size: 2.3rem;
+  outline: none;
+  text-decoration: none;
+}
+
+.expression {
+  display: block;
+  height: 4rem;
+  width: 99%;
+  text-align: right;
+  border: none;
+  background-color: rgb(236,236,236);
+  font-size: 1.2rem;
+  outline: none;
+  text-decoration: none;
+}
+
+.rowu {
+  display: flex;
+  flex-direction: row;
+}
+
+/* calculator buttons */
+.btn {
+  height: 50px;
+  width: 19%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3px;
+}
+
+.btn:hover {
+  background-color: rgb(210, 210, 210);
+}
+
+.btn-num {
+  background-color: #fdfdfd;
+  font-family: fantasy;
+}
+
+.btn-main {
+  background-color: #f7f7f7;
+}
+
+.btn-others {
+  height: 50px;
+  width: 19%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3px;
+  font-size: medium;
+  font-weight: bold;
+}
+
+/* Drop downs for trigonometry and normal functions */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  width: 100%;
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropbtn {
+  color: black;
+  width: 184px;
+  padding: 16px;
+  text-align: center;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.dropbtn:hover {
+  background-color: rgb(210, 210, 210);
+}
+
+.btnd {
+  height: 50px;
+  width: 33%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 3px;
+  background-color: #f7f7f7;
+}
+
+
+/* toggling classes */
+.show {
+  display: block;
+}
+
+.clicked-bg {
+  background-color: rgb(146, 199, 214);
+}
+
+.hidden {
+  display: none;
+}

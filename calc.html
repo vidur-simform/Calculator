@@ -8,32 +8,40 @@
   <link rel="icon" type="image/x-icon" href="images/calculator_icon.png">
   <title>Calculator</title>
   <link rel="stylesheet" href="calc.css" />
-  <script defer src="calc.js"></script>
+  <script defer src="scripts/calc.js"></script>
+  <script defer src="scripts/trigonometry.js"></script>
+  <script defer src="scripts/memory.js"></script>
+  <script defer src="scripts/functionsDropdown.js"></script>
+  <script defer src="scripts/functions.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 
 <body>
   <div class="calculator">
+    <!-- display sectoin -->
     <input type="text" id="expression-text" value="" class="expression" disabled>
     <input type="text" id="input-text" value="" class="input" disabled>
+    
+    <!-- calculator buttons -->
     <div class="rowu">
-      <div class="btn-others" id="deg-rad">RAD</div>
-      <div class="btn-others" id="f-e">F-E</div>
+      <div class="btn btn-others" id="deg-rad">RAD</div>
+      <div class="btn btn-others" id="f-e">F-E</div>
     </div>
 
     <div class="rowu">
-      <div class="btn-others" id="memory-clear">MC</div>
-      <div class="btn-others" id="memory-recall">MR</div>
-      <div class="btn-others" id="memory-add">M+</div>
-      <div class="btn-others" id="memory-sub">M-</div>
-      <div class="btn-others" id="memory-store">MS</div>
+      <div class="btn btn-others" id="memory-clear">MC</div>
+      <div class="btn btn-others" id="memory-recall">MR</div>
+      <div class="btn btn-others" id="memory-add">M+</div>
+      <div class="btn btn-others" id="memory-sub">M-</div>
+      <div class="btn btn-others" id="memory-store">MS</div>
     </div>
+
     <div class="rowu">
+      <!-- trigonometry dropdown -->
       <div class="dropdown">
-        <div id="trigonometry" class="dropbtn">
+        <div id="trigonometry-dropdown" class="dropbtn">
           &#x25FF;
           <span>&nbsp;&nbsp;</span>
           <span>Trigonometry&nbsp;
@@ -77,8 +85,10 @@
           </div>
         </div>
       </div>
+
+      <!-- functions dropdown -->
       <div class="dropdown">
-        <div id="functions" class="dropbtn">
+        <div id="functions-dropdown" class="dropbtn">
           <span style="font-size: large;font-weight: bold;">
             &#402;</span>&nbsp;&nbsp;Functions&nbsp;<i class="fa-solid fa-chevron-down"></i>
           </span>
@@ -90,13 +100,15 @@
             <div class="btn btnd" id="ceil">&LeftCeiling;x&RightCeiling;</div>
           </div>
           <div class="rowu">
-            <div class="btnd" id="random">rand</div>
-            <div class="btnd" id="deg-to-dms"><i class="fa-solid fa-arrow-right"></i>dms</div>
-            <div class="btnd" id="dms-to-deg"><i class="fa-solid fa-arrow-right"></i>deg</div>
+            <div class="btn btnd" id="random">rand</div>
+            <div class="btn btnd" id="deg-to-dms"><i class="fa-solid fa-arrow-right"></i>dms</div>
+            <div class="btn btnd" id="dms-to-deg"><i class="fa-solid fa-arrow-right"></i>deg</div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- main section of calculator -->
     <div class="mainsection">
       <div class="rowu">
         <div class="btn btn-main " id="btn-2nd"><span>2<sup>nd</sup></span></div>
@@ -141,7 +153,7 @@
       </div>
       <div class="rowu">
         <div class="btn btn-main btn-2nd-column" id="log">log</div>
-        <div class="btn btn-main btn-2nd-column hidden"><span>log<sub>y</sub>x</span></div>
+        <div class="btn btn-main btn-2nd-column hidden" id="log-x-base-y"><span>log<sub>y</sub>x</span></div>
         <div class="btn btn-num number" type="input" value="1">1</div>
         <div class="btn btn-num number">2</div>
         <div class="btn btn-num number">3</div>

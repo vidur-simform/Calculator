@@ -10,9 +10,6 @@ fE.addEventListener('click', () => {
     fE.classList.toggle('clicked-bg');
 });
 
-
-
-
 const input = document.getElementById('input-text');
 const expression = document.getElementById('expression-text');
 const numberInputs = document.getElementsByClassName('number');
@@ -60,24 +57,37 @@ eraseLast.addEventListener('click', () => {
     input.value = input.value.substring(0, input.value.length - 1);
 });
 
-
-const replaceLogBaseAndYthRoot = ()=>{
-    let str = expression.value.toString();
-    let logIndex = str.indexOf("logbase");
-    let i = logIndex;
-    while(i>=0 && ((!isNaN(str[i])) || str[i]=='.'))
-        i--;
-    i++;
-    let x = parseFloat(str.substring(i,logIndex));
-    let y = parseFloat(str.substring(logIndex + "logbase".length));
-    let result= (Math.log(x)/Math.log(y)).toFixed(3);
-    expression.value = str.replaceAll(x.toString()+"logbase"+y.toString());
+//replace and evaluate
+const replaceAndEvaluateAll = (target, method) => {
+    let str = "", tarIndex = -1, i = -1, x = 0, y = 2, result = 0;
+    while (true) {
+        str = expression.value.toString();
+        tarIndex = str.indexOf(target);
+        if (tarIndex == -1)
+            break;
+        i = tarIndex - 1;
+        while (i >= 0 && ((!isNaN(str[i])) || str[i] == '.'))
+            i--;
+        i++;
+        x = parseFloat(str.substring(i, tarIndex));
+        y = parseFloat(str.substring(tarIndex + target.length));
+        result = method(x, y).toString();
+        expression.value = str.replace(x.toString() + target + y.toString(), result);
+    }
 }
+
+const logXBaseYMethod = (a, b) => (Math.log(a) / Math.log(b)).toFixed(5);
+const ythRootOfXMethod = (a, b) => (Math.pow(a, 1 / b)).toFixed(5);
 
 equal.addEventListener('click', () => {
     try {
         expression.value += input.value;
-        replaceLogBaseAndYthRoot();
+
+        //evaluate all logXbaseY
+        replaceAndEvaluateAll("logbase", logXBaseYMethod);
+        //evaluate all ythRoot Of X
+        replaceAndEvaluateAll("ythroot", ythRootOfXMethod);
+
         input.value = eval((expression.value).replaceAll("^", "**").replaceAll("mod", "%")
             .replaceAll("÷", "/").replaceAll("x", "*"));
     }
@@ -93,8 +103,6 @@ const alterSign = document.getElementById('altersign');
 alterSign.addEventListener('click', () => {
     input.value = -1 * input.value;
 });
-
-
 
 //e 
 const constE = document.getElementById('const-e');
@@ -117,11 +125,11 @@ var deg = 0, fix = 1;
 
 /* fixed to exponential */
 document.getElementById('f-e')
-.addEventListener('click',()=>{
-    if(fix==1){
-        input.value = Number(input.value).toExponential().toString();
-    }
-    else{
-        input.value = Number(input.value).toFixed(5).toString();
-    }
-});
+    .addEventListener('click', () => {
+        if (fix == 1) {
+            input.value = Number(input.value).toExponential().toString();
+        }
+        else {
+            input.value = Number(input.value).toFixed(5).toString();
+        }
+    });

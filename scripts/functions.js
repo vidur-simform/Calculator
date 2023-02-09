@@ -144,7 +144,7 @@ document.getElementById('yth-root-of-x')
         expression.value = expression.value.substring(0, expression.value.length - 1) + ele.innerHTML;
     }
     else {
-        expression.value += input.value + "i^";
+        expression.value += input.value + "ythroot";
         input.value = "";
     }
 });

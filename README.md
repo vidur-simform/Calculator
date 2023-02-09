@@ -1,4 +1,4 @@
-# Calculator
+# Scientific Calculator
 **view** : https://vidur-simform.github.io/
 
 #### This is calculator created using html,css and js.
